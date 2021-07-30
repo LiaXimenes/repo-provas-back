@@ -15,7 +15,7 @@ async function searchSubjects(req: Request, res: Response){
 
 async function searchTestAfterSubjects(req: Request, res: Response){
     try{
-        const subjectId = Number(req.params.subjectId)
+        const subjectId = Number(req.params.subjectid)
 
         const testBySubjectId = await subjectService.gettingTestBySubject(subjectId)
     

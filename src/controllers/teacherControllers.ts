@@ -14,7 +14,7 @@ async function searchTeachers(req: Request, res: Response){
 
 async function searchTestAfterTeacher(req: Request, res: Response){
     try{
-        const teacherId = Number(req.params.teacherId)
+        const teacherId = Number(req.params.teacherid)
 
         const testByTeacherId = await teacherService.gettingTestByTeacherId(teacherId)
     

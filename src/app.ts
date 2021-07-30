@@ -21,11 +21,11 @@ app.post("/send-test", receiveingTestControllers.postingTest)
 
 app.get("/search-test/teacher", teacherControllers.searchTeachers)
 
-app.get("/search-test/:teacherid",teacherControllers.searchTestAfterTeacher)
+app.get("/search-test/teacher/:teacherid",teacherControllers.searchTestAfterTeacher)
 
 app.get("/search-test/subject",subjectControllers.searchSubjects)
 
-app.get("/search-test/:subjectid",subjectControllers.searchTestAfterSubjects)
+app.get("/search-test/subject/:subjectid",subjectControllers.searchTestAfterSubjects)
 
 
 
