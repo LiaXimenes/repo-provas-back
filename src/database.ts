@@ -1,12 +1,18 @@
 import { getConnectionManager } from "typeorm";
+import "./setup"
+
+if (process.env.NODE_ENV === 'production' && process.env.DATABASE_URL.indexOf("sslmode=require") === -1) {
+  process.env.DATABASE_URL += "?sslmode=require";
+}
 
 export default async function connect () {
   const connectionManager = await getConnectionManager();
   const connection = connectionManager.create({
     name: "default",
     type: "postgres",
-    url: "postgres://postgres:1995@localhost:5432/repo_provas",
-    entities: ["src/entities/*.ts"]
+    url: process.env.DATABASE_URL,
+    entities: [`${process.env.NODE_ENV === 'production' ? 'dist' : 'src'}/entities/*.*`],
+    ssl: process.env.NODE_ENV === 'production'
   });
   await connection.connect();
   return connection;

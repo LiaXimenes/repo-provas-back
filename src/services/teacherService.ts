@@ -1,7 +1,7 @@
 import { getRepository } from "typeorm";
 
 import Teacher from "../entities/teacher";
-import Test from "../entities/test";
+import Tests from "../entities/tests";
 
 
 async function gettingListOfTeachers(){
@@ -10,7 +10,7 @@ async function gettingListOfTeachers(){
 }
 
 async function gettingTestByTeacherId(teacherId : number){
-    const testByTeacherId = await getRepository(Test).find({teacherId} ); 
+    const testByTeacherId = await getRepository(Tests).find({teacherId} ); 
     return testByTeacherId;
 }
 

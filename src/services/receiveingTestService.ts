@@ -1,6 +1,6 @@
 import { getRepository } from "typeorm";
 
-import Test from "../entities/test";
+import Test from "../entities/tests";
 
 interface TestInterface {
     name: string; 

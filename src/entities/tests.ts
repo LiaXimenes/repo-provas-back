@@ -4,7 +4,7 @@ import Subject from "./subject";
 import Teacher from "./teacher";
 
 @Entity('test')
-export default class Test {
+export default class Tests {
   @PrimaryGeneratedColumn()
   id: number;
   

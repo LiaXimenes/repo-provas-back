@@ -2,6 +2,7 @@ import "reflect-metadata";
 import express from 'express';
 import cors from 'cors';
 
+import "./setup"
 import connectDatabase from "./database";
 
 import * as receiveingTestControllers from "./controllers/receiveingTestControllers"
@@ -26,10 +27,5 @@ app.get("/search-test/teacher/:teacherid",teacherControllers.searchTestAfterTeac
 app.get("/search-test/subject",subjectControllers.searchSubjects)
 
 app.get("/search-test/subject/:subjectid",subjectControllers.searchTestAfterSubjects)
-
-
-
-
-
 
 export default app;

@@ -1,10 +1,11 @@
 import { getRepository } from "typeorm";
 
 import Subject from "../entities/subject";
-import Test from "../entities/test";
+import Test from "../entities/tests";
 
 async function gettingListOfSubjects(){
     const subject = await getRepository(Subject).find();
+    console.log(subject)
     return subject;
 }
 
