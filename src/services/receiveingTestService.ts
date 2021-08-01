@@ -11,8 +11,7 @@ interface TestInterface {
 }
 
 async function postingTest(testInfos: TestInterface){
-    await getRepository(Test).insert(testInfos)
-
+    return (await getRepository(Test).insert(testInfos)).generatedMaps[0].id;
 }
 
 export{postingTest}
