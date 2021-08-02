@@ -9,7 +9,7 @@ async function gettingListOfSubjects(){
 }
 
 async function gettingTestBySubject(subjectId: number){
-    const testBySubjectId = await getRepository(Test).find({ subjectId });
+    const testBySubjectId = await getRepository(Test).find({relations: ["teacher"], where: {subjectId}});
     return testBySubjectId;
 }
 

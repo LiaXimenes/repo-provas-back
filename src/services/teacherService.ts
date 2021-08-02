@@ -10,7 +10,7 @@ async function gettingListOfTeachers(){
 }
 
 async function gettingTestByTeacherId(teacherId : number){
-    const testByTeacherId = await getRepository(Tests).find({teacherId} ); 
+    const testByTeacherId = await getRepository(Tests).find({teacherId}); 
     return testByTeacherId;
 }
 
