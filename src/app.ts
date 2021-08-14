@@ -10,6 +10,7 @@ import * as teacherControllers from "./controllers/teacherControllers"
 import * as subjectControllers from "./controllers/subjectControllers"
 import * as categoryControllers from "./controllers/categoryController"
 import * as teacherSubjectControllers from "./controllers/teacherSubjectControllers"
+import * as semesterControllers from "./controllers/semesterControllers"
 
 
 const app = express();
@@ -21,6 +22,8 @@ export async function init () {
 }
 
 app.post("/send-test", receiveingTestControllers.postingTest)
+
+app.get("/search-test/semester", semesterControllers.searchSemester)
 
 app.get("/search-test/category", categoryControllers.searchCategory)
 
