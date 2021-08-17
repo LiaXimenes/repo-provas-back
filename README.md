@@ -20,6 +20,7 @@ The following tools and frameworks were used in the construction of the project:
 * Express
 * PostgreSQL
 * Jest
+* Typescript
 
 ## How to run
 Under construction, sorry :(
